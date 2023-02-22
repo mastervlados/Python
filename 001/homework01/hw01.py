@@ -38,7 +38,7 @@ getSumDigitsOfThreeDigitNumber(100)
 # 60 -> 10  40  10
 print("\n")
 def origami(s):
-    if s % 2 == 0:
+    if s % 6 == 0:
         result = int(s / 2 // 3) 
         # :2 to find a half
         # :3 to get count of any boy
@@ -46,7 +46,7 @@ def origami(s):
     else:
         print("Посчтитайте количество журавликов еще раз..")
 
-origami(6)
+origami(8)
 origami(24)
 origami(60)
 origami(3)
