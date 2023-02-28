@@ -48,13 +48,16 @@ else:
     x = 0 # doesn't matter
     y = 2
     flag = True
+    step = 0
     while flag:
-        x = hintProdOfBothNumbers // y
+        x = hintProdOfBothNumbers // y # :2 :3 :4 less
+        step += 1
         if x + y == hintSumOfBothNumbers and x * y == hintProdOfBothNumbers:
             print(f"Петя загадал {x, y}, а Катя красотка!")
             flag = False # same as break
         else:
             y += 1 # increase by 1 to get next value for division
+    print(f"Она отгадала с {step} попытки!")
 
 # ********************
 # **** Задача 14: ****
