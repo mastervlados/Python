@@ -2,7 +2,7 @@ import random
 
 def fillListRandomNaturalNumbers(n):
     targetList = list()
-    for i in range(1, n + 1): 
+    for i in range(n): 
         targetList.append(random.randrange(1, 10 + 1)) # [1, 10) 1 - 9 | + 1
     print(*targetList)
     return targetList
@@ -61,8 +61,10 @@ for i in listWithNaturalNumbers:
         minValue = i
     elif minValue + 1 == maxValue:
         break
-
-print("-> {} is near to {}".format(minValue, maxValue))
+if minValue >= maxValue:
+    print(f"-> nothing exist for {maxValue}")
+else:
+    print("-> {} is near to {}".format(minValue, maxValue))
 
 # ********************
 # **** Задача 20: ****
