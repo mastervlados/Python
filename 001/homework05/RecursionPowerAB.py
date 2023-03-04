@@ -7,10 +7,8 @@
 # A = 2; B = 3 -> 8 
 
 def pow_ab(a, b):
-    if b == 1:
-        return a
-    elif b == 0:
-        return 1 # the number in ^0 = 1
+    if b == 0:
+        return 1 # the number in ^0 = 1    
     return a * pow_ab(a, b - 1)
 
 a = int(input("Введите число А = "))
