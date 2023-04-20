@@ -25,41 +25,6 @@ else:
     print("Переверните все монеты с решкой - {}".format(theCoinsAreTails))
 
 # ********************
-# **** Задача 12: ****
-# ********************
-# Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница. 
-# Петя помогает Кате по математике. Он задумывает два натуральных числа X и Y (X,Y≤1000), 
-# а Катя должна их отгадать. Для этого Петя делает две подсказки. 
-# Он называет сумму этих чисел S и их произведение P. 
-# Помогите Кате отгадать задуманные Петей числа.
-print("\n")
-print("Петя, ты студент! Как я тебя понимаю:D")
-firstGuessIsX = int(input("Вводи первое число: "))
-secondGuessIsY = int(input("Вводи второе число: "))
-hintSumOfBothNumbers = firstGuessIsX + secondGuessIsY # equal S
-hintProdOfBothNumbers = firstGuessIsX * secondGuessIsY # equal P
-# Kate is a pretty girl 100%
-# natural numbers start from 1
-# max call of recurcion in Python equal 1000 
-# it doesn't work, 'cause the numbers might (1000, 1000)
-if firstGuessIsX > 1000 or secondGuessIsY > 1000:
-    print("Ты обманщик!")
-else:
-    x = 0 # doesn't matter
-    y = 2
-    flag = True
-    step = 0
-    while flag:
-        x = hintProdOfBothNumbers // y # :2 :3 :4 less
-        step += 1
-        if x + y == hintSumOfBothNumbers and x * y == hintProdOfBothNumbers:
-            print(f"Петя загадал {x, y}, а Катя красотка!")
-            flag = False # same as break
-        else:
-            y += 1 # increase by 1 to get next value for division
-    print(f"Она отгадала с {step} попытки!")
-
-# ********************
 # **** Задача 14: ****
 # ********************
 # Требуется вывести все целые степени двойки (т.е. числа вида 2k), 
